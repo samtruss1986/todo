@@ -21,7 +21,7 @@ document.getElementById('add').addEventListener('click', function() {
 
 document.getElementById('item').addEventListener('keydown', function (e) {
   var value = this.value;
-  if (e.code === 'Enter' && value) {
+  if (e.code === 'Enter' && value || e.keyCode === 13 && value) {
     addItem(value);
   }
 });
